@@ -8,7 +8,7 @@
 
 ### 1、学习 Java 8
 
-[《Java 8 实战》阅读笔记]()
+[《Java 8 实战》阅读笔记](https://github.com/daiDai-study/Learning-Java/blob/master/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Java8%E5%AE%9E%E6%88%98/Java8%E5%AE%9E%E6%88%98-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0.md)
 
 ## 二、学习中的建议
 
