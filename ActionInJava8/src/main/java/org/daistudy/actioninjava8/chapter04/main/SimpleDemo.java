@@ -1,17 +1,16 @@
 package org.daistudy.actioninjava8.chapter04.main;
 
-import org.daistudy.actioninjava8.chapter04.model.Dish;
+import org.daistudy.actioninjava8.common.model.Dish;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * 从给定的菜单（dish）中查出所有热量低于400的菜，并按热量从高到低的顺序将菜名取出
  */
 public class SimpleDemo {
     public static void main(String[] args) {
-        List<Dish> dishes = init();
+        List<Dish> dishes = Dish.init();
 //        List<String> dishNameList = actionInJava7(dishes);
 //        System.out.println(dishNameList);
 //
@@ -35,21 +34,6 @@ public class SimpleDemo {
 //        final Stream<String> stream = Arrays.asList("Java8", "in", "Action").stream();
 //        stream.forEach(System.out::println);
 //        stream.forEach(System.out::println);
-    }
-
-    static List<Dish> init(){
-        List<Dish> dishes = Arrays.asList(
-                new Dish("pork", false, 800, Dish.Type.MEAT),
-                new Dish("beef", false, 700, Dish.Type.MEAT),
-                new Dish("chicken", false, 400, Dish.Type.MEAT),
-                new Dish("french fries", true, 530, Dish.Type.OTHER),
-                new Dish("rice", true, 350, Dish.Type.OTHER),
-                new Dish("season fruit", true, 120, Dish.Type.OTHER),
-                new Dish("pizza", true, 550, Dish.Type.OTHER),
-                new Dish("prawns", false, 300, Dish.Type.FISH),
-                new Dish("salmon", false, 450, Dish.Type.FISH)
-        );
-        return dishes;
     }
 
     static List<String> actionInJava7(List<Dish> dishes){
