@@ -19,7 +19,7 @@
         <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
 
         <!-- 依赖版本管理 -->
-        <tomcat.version>9.0.30</tomcat.version>
+        <tomcat.version>9.0.35</tomcat.version>
     </properties>
 
     <dependencies>
