@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="HttpServer" />
-        <module name="http-server" />
+        <module name="HelloJsp" />
+        <module name="hello-jsp" />
       </profile>
     </annotationProcessing>
   </component>

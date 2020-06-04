@@ -2,26 +2,13 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="HelloServlet:war exploded" />
+      <artifact name="hello-servlet:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dec76a1-0347-4d8a-80d3-23b798bf04ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/daistudy/web/helloservlet/HelloServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HttpServer/src/main/java/org/daistudy/web/httpserver/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TacoCloud/src/main/java/org/daistudy/springinaction5/tacocloud/controller/DesignTacoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TacoCloud/src/main/java/org/daistudy/springinaction5/tacocloud/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TacoCloud/src/main/java/org/daistudy/springinaction5/tacocloud/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TacoCloud/src/main/java/org/daistudy/springinaction5/tacocloud/domain/Design.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TacoCloud/src/main/java/org/daistudy/springinaction5/tacocloud/domain/Ingredient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TacoCloud/src/main/java/org/daistudy/springinaction5/tacocloud/domain/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TacoCloud/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TacoCloud/src/main/resources/static/images/umi1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TacoCloud/src/main/resources/templates/design.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TacoCloud/src/main/resources/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TacoCloud/src/main/resources/templates/orderForm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TacoCloud/src/test/java/org/daistudy/springinaction5/tacocloud/controller/HomeControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +50,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -82,12 +70,12 @@
   </component>
   <component name="RunManager">
     <configuration name="HelloServlet" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.22" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/hello/" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/hello_servlet_war_exploded/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="HelloServlet:war exploded">
+        <artifact name="hello-servlet:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/hello" />
+            <option name="CONTEXT_PATH" value="/hello_servlet_war_exploded" />
           </settings>
         </artifact>
       </deployment>
@@ -169,6 +157,7 @@
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="HelloServlet:war exploded" />
+          <artifact name="hello-servlet:war exploded" />
         </option>
       </method>
     </configuration>
@@ -184,6 +173,8 @@
       <option name="presentableId" value="Default" />
       <updated>1591090580908</updated>
       <workItem from="1591090586348" duration="4268000" />
+      <workItem from="1591104860497" duration="19000" />
+      <workItem from="1591105988259" duration="589000" />
     </task>
     <servers />
   </component>
@@ -195,7 +186,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

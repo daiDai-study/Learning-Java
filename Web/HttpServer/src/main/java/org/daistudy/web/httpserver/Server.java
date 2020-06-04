@@ -1,7 +1,5 @@
 package org.daistudy.web.httpserver;
 
-import jdk.internal.util.xml.impl.Input;
-
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -46,9 +44,10 @@ class Handler extends Thread{
         System.out.println("Process new http request...");
         BufferedReader reader = new BufferedReader(new InputStreamReader(input, StandardCharsets.UTF_8));
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(output, StandardCharsets.UTF_8));
-        // TODO： 处理请求
+        // 处理请求
         boolean requestOk = false;
         String first = reader.readLine();
+        System.out.println("\nHTTP Header:");
         System.out.println(first);
         if (first.startsWith("GET / HTTP/1.")) {
             requestOk = true;
@@ -60,6 +59,7 @@ class Handler extends Thread{
             }
             System.out.println(header);
         }
+        System.out.println();
         System.out.println(requestOk ? "Response OK" : "Response Error");
         if (!requestOk) {
             // 发送错误响应:
