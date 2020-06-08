@@ -1,4 +1,4 @@
-package org.daistudy.web.servletembeded;
+package org.daistudy.web.servletembeded.servlet.redirect;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -7,11 +7,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/morning")
-public class MorningServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/hi")
+public class HiServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // 转发 服务器内部转发，浏览器只会发出一个请求
-        req.getRequestDispatcher("/hello2").forward(req, resp);
+        final String name = req.getParameter("name");
+        String redirectToUrl = "/hello2" + (name == null ? "": "?name=" + name);
+        // 302 临时重定向
+        resp.sendRedirect(redirectToUrl);
     }
 }

@@ -481,11 +481,41 @@ req.getRequestDispatcher("/WEB-INF/user.jsp").forward(req, resp);
 + 业务逻辑最好由纯粹的 Java 类实现，而不是强迫继承自 Servlet -- 反射机制。
 
 **MVC 框架的设计**
-+ ModelAndView：包含一个 `View` 和一个 `Model`。其中 `View` 代表模板的路径（`String`），`Model` 表示要传递的数据（`Map<String, Object>`）
-+ DispatcherServlet：一个接收所有请求（映射到 `/`）的 `Servlet`，作为具体请求到具体方法的调度员。该 `Servlet` 会根据不同的 `Controller` 的方法定义的 `@Get` 或 `@Post` 的 `Path` 决定调用哪个方法，最后，获得方法返回的 `ModelAndView` 后，渲染模板，写入 `HttpServletResponse`，即完成了整个MVC的处理
-
 
 ![](./imgs/web-mvc.png)
+
++ ModelAndView：包含一个 `View` 和一个 `Model`。其中 `View` 代表模板的路径（`String`），`Model` 表示要传递的数据（`Map<String, Object>`）
++ DispatcherServlet：一个接收所有请求（映射到 `/`）的 `Servlet`，作为具体请求到具体方法的调度员。该 `Servlet` 会根据不同的 `Controller` 的方法定义的 `@GetMapping` 或 `@PostMapping` 的 `Path` 决定调用哪个方法，最后，获得方法返回的 `ModelAndView` 后，渲染模板，写入 `HttpServletResponse`，即完成了整个MVC的处理
+    + 接受所有请求
+    + Servlet 的初始化：需要扫描 controllers 中注解为 `GetMapping` 和 `PostMapping` （或者其他注解）的方法，将 `URL` 和 对应的执行方法存储在一个 Map 中，其中对应的执行方法需要作为一个（`Dispatcher`）对象存储，`Dispatcher` 可以作为一个接口（`invoke` 方法），并根据 HTTP 请求类型分别实现不同的具体类型（如 `GetDispatcher`、`PostDispatcher`），不同类型的 `Dispatcher` 的 `invoke` 方法的实现不同
+        + `GetDispatcher` 中基础属性：
+            ```java
+            private Object instance; // Controller 实例
+            private Method method; // Controller 方法
+            private String[] parameterNames; // 方法参数名称
+            private Class<?>[] parameterClasses; // 方法参数类型
+            ```
+        + `PostDispatcher` 中基础属性：
+             ```java
+            private Object instance; // Controller 实例
+            private Method method; // Controller 方法
+            private Class<?>[] parameterClasses; // 方法参数类型
+            private ObjectMapper objectMapper; // JSON映射
+            ```
+    + Servlet 的执行：
+        1. 根据请求路径从 Map 中找到对应的 `Dispatcher`，如果没有找到则返回 `404`，如果找到，则执行对应的方法，并返回结果（`ModelAndView`）
+        2. `ModelAndView` 如果为 `null` ，直接 `return`；如果 `ModelAndView` 中的 `view` 是以 `redirect:` 开头的字符串，则截取 `redirect:` 之后的字符串作为真实的 `view`，然后直接 `resp.sendRedirect()` 进行重定向；否则，直接将 `ModelAndView` 给到指定的模板引擎（如 `Themeleaf`）并将 HTML 写入到响应中，返回响应。
+        
+## Filter
+> Filter，即过滤器，是一种对 HTTP 请求进行**预处理**的组件，使得公共处理代码能集中到一起，并且可以有针对性地拦截或者放行 HTTP 请求，适用于日志、登录检查、全局设置等
+>
+> Filter 基于 `URL` 进行映射
+>
+> 多个 Filter 会组成一个链，每个请求都被链上的 Filter 依次处理，Servlet 规范并没有对 `@WebFilter` 注解标注的 Filter 规定顺序。如果一定要给每个 Filter 指定顺序，就必须在 web.xml 文件中对这些 Filter 再配置一遍
+>
+> 如果 Filter 要使请求继续被处理，就一定要调用 `chain.doFilter()`，如果没有调用，请求不会继续处理，默认响应是 `200` 的空白输出
+
+
 
 ## Cookie、Session 和 Token
 

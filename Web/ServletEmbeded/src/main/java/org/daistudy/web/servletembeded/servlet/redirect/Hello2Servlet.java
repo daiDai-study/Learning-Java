@@ -1,4 +1,4 @@
-package org.daistudy.web.servletembeded;
+package org.daistudy.web.servletembeded.servlet.redirect;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
