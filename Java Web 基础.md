@@ -515,7 +515,127 @@ req.getRequestDispatcher("/WEB-INF/user.jsp").forward(req, resp);
 >
 > 如果 Filter 要使请求继续被处理，就一定要调用 `chain.doFilter()`，如果没有调用，请求不会继续处理，默认响应是 `200` 的空白输出
 
+### Filter 中修改 request
+问题背景：对 `HttpServletRequest` 进行读取时，只能读取一次。如果 `Filter` 调用 `getInputStream()` 读取了一次数据，后续 `Servlet` 处理时，再次读取，将无法读到任何数据
 
+解决方案：“伪造” `HttpServletRequest`
+
+```java
+class ReReadableHttpServletRequest extends HttpServletRequestWrapper {
+    private byte[] body;
+    private boolean open = false;
+
+    public ReReadableHttpServletRequest(HttpServletRequest request, byte[] body) {
+        super(request);
+        this.body = body;
+    }
+
+    // 返回InputStream:
+    public ServletInputStream getInputStream() throws IOException {
+        if (open) {
+            throw new IllegalStateException("Cannot re-open input stream!");
+        }
+        open = true;
+        return new ServletInputStream() {
+            private int offset = 0;
+
+            public boolean isFinished() {
+                return offset >= body.length;
+            }
+
+            public boolean isReady() {
+                return true;
+            }
+
+            public void setReadListener(ReadListener listener) {
+            }
+
+            public int read() throws IOException {
+                if (offset >= body.length) {
+                    return -1;
+                }
+                int n = body[offset];
+                offset++;
+                return n;
+            }
+        };
+    }
+
+    // 返回Reader:
+    public BufferedReader getReader() throws IOException {
+        if (open) {
+            throw new IllegalStateException("Cannot re-open reader!");
+        }
+        open = true;
+        return new BufferedReader(new InputStreamReader(getInputStream(), "UTF-8"));
+    }
+}
+```
+
+### Filter 中修改 response
+问题背景：对 `HttpServletResponse` 进行写入时，会写入 `Socket`，也就无法获取下游组件（`doFilter` 中后续组件）写入的内容
+
+解决方案：“伪造” `HttpServletRequest`
+
+```java
+public class CachedHttpServletResponse extends HttpServletResponseWrapper {
+    private boolean open = false;
+    private ByteArrayOutputStream output = new ByteArrayOutputStream();
+
+    public CachedHttpServletResponse(HttpServletResponse response) {
+        super(response);
+    }
+
+    // 获取Writer:
+    public PrintWriter getWriter() throws IOException {
+        if (open) {
+            throw new IllegalStateException("Cannot re-open writer!");
+        }
+        open = true;
+//        return new PrintWriter(new OutputStreamWriter(getOutputStream(), StandardCharsets.UTF_8), false);
+        return new PrintWriter(new OutputStreamWriter(output, StandardCharsets.UTF_8), false);
+    }
+
+    // 获取OutputStream:
+    public ServletOutputStream getOutputStream() throws IOException {
+        if (open) {
+            throw new IllegalStateException("Cannot re-open output stream!");
+        }
+        open = true;
+        return new ServletOutputStream() {
+            public boolean isReady() {
+                return true;
+            }
+
+            public void setWriteListener(WriteListener listener) {
+            }
+
+            // 实际写入ByteArrayOutputStream:
+            public void write(int b) throws IOException {
+                output.write(b);
+            }
+        };
+    }
+
+    // 返回写入的byte[]:
+    public byte[] getContent() {
+        return output.toByteArray();
+    }
+}
+```
+
+## Listener
+
+> 除了 `Servlet` 和 `Filter` 外，JavaEE 的 `Servlet` 规范还提供了第三种组件：`Listener`。
+> 
+> `Listener`，即监听器，会被 `Web` 服务器自动初始化
+
+常用的有：
++ `ServletContextListener`：监听 `ServletContext` 的创建和销毁事件；
++ `HttpSessionListener`：监听 `HttpSession` 的创建和销毁事件；
++ `ServletRequestListener`：监听 `ServletRequest` 请求的创建和销毁事件；
++ `ServletRequestAttributeListener`：监听 `ServletRequest` 请求的属性变化事件（即调用 `ServletRequest.setAttribute()` 方法）；
++ `ServletContextAttributeListener`：监听 `ServletContext` 的属性变化事件（即调用 `ServletContext.setAttribute()` 方法）；
 
 ## Cookie、Session 和 Token
 

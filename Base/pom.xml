@@ -12,6 +12,8 @@
         <module>Collection</module>
         <module>Event</module>
         <module>Proxy</module>
+        <module>IO</module>
+        <module>DateTime</module>
     </modules>
 
     <properties>
