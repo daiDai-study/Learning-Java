@@ -7,8 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dec76a1-0347-4d8a-80d3-23b798bf04ad" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/Object/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/Object/src/main/java/org/daistudy/onjava/object/copy/shallow/main/SimpleDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/Object/src/main/java/org/daistudy/onjava/object/copy/shallow/model/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/Object/src/main/java/org/daistudy/onjava/object/copy/shallow/model/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Base/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mvc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mvc/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -175,6 +179,7 @@
       <workItem from="1591090586348" duration="4268000" />
       <workItem from="1591104860497" duration="19000" />
       <workItem from="1591105988259" duration="589000" />
+      <workItem from="1592480698383" duration="37000" />
     </task>
     <servers />
   </component>
