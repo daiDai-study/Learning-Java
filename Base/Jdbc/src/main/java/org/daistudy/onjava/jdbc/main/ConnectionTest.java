@@ -14,6 +14,9 @@ public class ConnectionTest {
         // DriverManager会自动扫描classpath，找到所有的JDBC驱动
 //        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 
+        // jdbc4.0之前一般通过 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver"); 进行手动加载
+        // jdbc4.0之后 DriverManager 实现了 spi 机制去自动加载
+
         // 2、连接
         String url = "jdbc:sqlserver://10.177.97.180:1433; DatabaseName=plp_private";
         String username = "sqluser";

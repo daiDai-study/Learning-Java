@@ -74,5 +74,6 @@ public class SimpleLocalDateTimeDemo {
         // 本月第1个周一:
         LocalDate firstWeekday = LocalDate.now().with(TemporalAdjusters.firstInMonth(DayOfWeek.MONDAY));
         System.out.println(firstWeekday);
+
     }
 }

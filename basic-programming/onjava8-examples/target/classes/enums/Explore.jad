@@ -1,0 +1,39 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   Reflection.java
+
+package enums;
+
+
+final class Explore extends Enum
+{
+
+    public static Explore[] values()
+    {
+        return (Explore[])$VALUES.clone();
+    }
+
+    public static Explore valueOf(String name)
+    {
+        return (Explore)Enum.valueOf(enums/Explore, name);
+    }
+
+    private Explore(String s, int i)
+    {
+        super(s, i);
+    }
+
+    public static final Explore HERE;
+    public static final Explore THERE;
+    private static final Explore $VALUES[];
+
+    static 
+    {
+        HERE = new Explore("HERE", 0);
+        THERE = new Explore("THERE", 1);
+        $VALUES = (new Explore[] {
+            HERE, THERE
+        });
+    }
+}

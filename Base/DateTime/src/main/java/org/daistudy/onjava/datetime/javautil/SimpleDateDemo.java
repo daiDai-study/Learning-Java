@@ -28,5 +28,8 @@ public class SimpleDateDemo {
         // 转转为指定日期时间格式
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         System.out.println(sdf.format(date));
+
+        Date date1 = new Date(1598889600000L);
+        System.out.println(sdf.format(date1));
     }
 }

@@ -69,7 +69,7 @@ class Buffer{
     // 放入产品
     public synchronized void push(Product product) {
         // 满了，需要通知消费者消费，生产者需要等待
-        if(count >= size){
+        while(count >= size){
             System.out.println("生产者需要等待");
             try {
                 this.wait();
@@ -86,7 +86,7 @@ class Buffer{
     // 弹出产品
     public synchronized Product pop() {
         // 没了，生产者生产，消费者等待
-        if(count <= 0){
+        while(count <= 0){
             System.out.println("消费者需要等待");
             try {
                 this.wait();

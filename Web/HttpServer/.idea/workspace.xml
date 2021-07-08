@@ -2,11 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbcec25b-49a4-44ec-9566-be1ba615dd02" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../HelloServlet/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloServlet/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloServlet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloServlet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/daistudy/web/httpserver/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/daistudy/web/httpserver/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/Object/src/main/java/org/daistudy/onjava/object/copy/shallow/main/SimpleObjectWithPrimitive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/Object/src/main/java/org/daistudy/onjava/object/copy/shallow/main/SimpleObjectWithReference.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/Object/src/main/java/org/daistudy/onjava/object/copy/shallow/main/SimpleObjectWithString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/Object/src/main/java/org/daistudy/onjava/object/copy/shallow/main/SimpleObjectWithoutCloneable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/Object/src/main/java/org/daistudy/onjava/object/copy/shallow/model/SimpleObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/createthread/ImplementsCallableWithFutureTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/createthread/ImplementsRunnable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/daemon/DaemonThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/deadlock/ClassicDeadLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/interrupt/InterruptSleep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/interrupt/InterruptedAndIsInterrupted.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/interrupt/ThreadTerminate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/join/JoinInterrupt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/join/JoinTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/reorder/TestWithReorder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/sleep/SleepInterrupt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/sleep/SleepNotReleaseLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/threadlocal/ThreadLocalInheriable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/threadlocal/ThreadLocalUninheriable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/unsafeutil/UnsafeAvaiableWithReflection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/unsafeutil/UnsafeNotAvaiableDirectly.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/waitandnotify/WaitInterrupt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/waitandnotify/WaitReleaseLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/yield/YieldTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/yield/YieldWithLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/lock/reentrant/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/lock/reentrant/conditionobject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/locksupport/InterruptPark.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/locksupport/ParkWithBlocker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/locksupport/UnparkPark.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/sourceanalyse/atomic/TestAtomicLong.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/sourceanalyse/atomic/TestLongAccumulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/sourceanalyse/atomic/TestLongAdder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/sourceanalyse/copyonwrite/TestCopyOnWriteArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/sourceanalyse/random/TestRandom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/util/DateTimeUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/spi/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/spi/src/main/java/org/daistudy/onjava/api/service/SayService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/spi/src/main/java/org/daistudy/onjava/api/service/impl/ASayServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/spi/src/main/java/org/daistudy/onjava/api/service/impl/BSayServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/spi/src/main/java/org/daistudy/onjava/api/test/SpiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Base/spi/src/main/resources/META-INF/services/org.daistudy.onjava.api.service.SayService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Base/Collection/src/main/java/org/daistudy/onjava/collection/hashmap/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Base/Collection/src/main/java/org/daistudy/onjava/collection/hashmap/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Base/DateTime/src/main/java/org/daistudy/onjava/datetime/javatime/SimpleLocalDateTimeDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Base/DateTime/src/main/java/org/daistudy/onjava/datetime/javatime/SimpleLocalDateTimeDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Base/DateTime/src/main/java/org/daistudy/onjava/datetime/javautil/SimpleDateDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Base/DateTime/src/main/java/org/daistudy/onjava/datetime/javautil/SimpleDateDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Base/Jdbc/src/main/java/org/daistudy/onjava/jdbc/main/ConnectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Base/Jdbc/src/main/java/org/daistudy/onjava/jdbc/main/ConnectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/communication/pc/monitor/Monitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/communication/pc/monitor/Monitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/concept/DeadLock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/demo/ExtendsThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/createthread/ExtendsThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/demo/ImplementsCallable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/createthread/ImplementsCallableWithPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/demo/ImplementsRunnable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/threadlocal/ThreadLocalDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Base/concurrent/src/main/java/org/daistudy/onjava/concurrent/base/threadlocal/ThreadLocalDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Base/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java内存模型.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java内存模型.xmind" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java多线程.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java多线程.xmind" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SourceAnalysisInJdk8/src/java/util/HashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SourceAnalysisInJdk8/src/java/util/HashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../读书笔记/Java8实战/Java8实战-读书笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../读书笔记/Java8实战/Java8实战-读书笔记.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +79,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/softwareInstalled/apache-maven-3.6.3" />
+        <option name="mavenHome" value="D:/ProgramFiles/apache-maven-3.6.3" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -45,7 +97,7 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="http.proxy" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -93,6 +145,7 @@
       <workItem from="1591090595865" duration="1343000" />
       <workItem from="1591165003635" duration="2981000" />
       <workItem from="1591248994821" duration="19000" />
+      <workItem from="1608168335941" duration="1433000" />
     </task>
     <servers />
   </component>

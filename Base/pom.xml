@@ -18,6 +18,8 @@
         <module>Jdbc</module>
         <module>concurrent</module>
         <module>Generic</module>
+        <module>spi</module>
+        <module>oop</module>
     </modules>
 
     <properties>

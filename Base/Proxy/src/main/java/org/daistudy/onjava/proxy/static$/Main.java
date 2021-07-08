@@ -4,6 +4,8 @@ import org.daistudy.onjava.proxy.model.CalculatorImpl;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(new ProxyFactory(new CalculatorImpl()).add(1, 2));
+        CalculatorImpl target = new CalculatorImpl();
+        CalculatorProxy proxy = new CalculatorProxy(target);
+        System.out.println(proxy.add(1, 2));
     }
 }
